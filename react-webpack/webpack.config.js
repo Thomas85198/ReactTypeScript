@@ -1,8 +1,5 @@
-/* webpack.config.js */
 const path = require('path');
-/* 要先把處理 CSS 的外掛程式匯入 */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 
 module.exports = {
     entry: './src/index.jsx',
@@ -10,6 +7,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist/'),
     },
+    mode: 'development',
     module: {
         rules: [
             {
@@ -44,7 +42,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'index.css'
+            filename: 'index.css',
         }),
     ],
     devServer:{

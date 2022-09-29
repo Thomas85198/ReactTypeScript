@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './components/HelloWorld';
+import Home from './views/Home';
 
 ReactDOM.render(
-    <HelloWorld />,
+    <Home />,
     document.getElementById('root')
 );
